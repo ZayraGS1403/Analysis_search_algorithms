@@ -1,5 +1,15 @@
-# Lineal search implementation
-# Array can be unsorted
+"""
+This algorithm is the simplest one, it just iterates
+over the array and compares each element with the target.
+The time complexity of this algorithm is O(n) because
+it has to iterate over all the elements of the array.
+@param arr: The array where the algorithm will search the target.
+@param target: The element that the algorithm will search in the array.
+@return: True if the target is in the array, False otherwise.
+
+"""
+
+
 def lineal_search(arr, target):
     for i in range(len(arr)):  # O(n)
         if arr[i] == target:  # O(1)
@@ -11,8 +21,18 @@ def lineal_search(arr, target):
 # O(lineal_search) = O(n)
 
 
-# Search in implementation
-# Array can be unsorted
+"""
+    This algorithm is a little bit more complex than the previous one.
+    It uses the 'in' operator to check if the target
+    is in the array. The time complexity of this algorithm is O(n)
+    because the 'in' operator has to iterate over all the
+    elements of the array.
+    @param arr: The array where the algorithm will search the target.
+    @param target: The element that the algorithm will search in the array.
+    @return: True if the target is in the array, False otherwise.
+"""
+
+
 def search_in(arr, target):
     if target in arr:  # O(n) en el peor caso
         return True  # O(1)
@@ -24,13 +44,24 @@ def search_in(arr, target):
 # O(search_in) = O(n)
 
 
-# Binary search implementation
-# Array must be sorted
+"""
+    It uses the binary search algorithm to find the target in the array.
+    The time complexity of this algorithm is O(log n) because it divides
+    the problem size by half in each iteration.
+    The array must be sorted.
+    @param arr: The array where the algorithm will search the target.
+    @param target: The element that the algorithm will search in the array.
+    @return: True if the target is in the array, False otherwise.
+"""
+
+
 def binary_search(arr, target):
     left = 0  # O(1)
     rigth = len(arr) - 1  # O(1)
 
-    while (left <= rigth):  # It runs ( O(log n)) times because, in each iteration, the problem size is reduced by half.
+    while (
+        left <= rigth
+    ):  # It runs ( O(log n)) times because, in each iteration, the problem size is reduced by half.
         mid = left + (rigth - left) // 2  # O(1)
 
         if arr[mid] == target:  # O(1)
@@ -47,9 +78,17 @@ def binary_search(arr, target):
 # o(binary_search) = O(log n) * O(6) + O(2)
 # o(binary_search) = O(log n)
 
+"""
+    It uses the ternary search algorithm to find the target in the array.
+    The time complexity of this algorithm is O(log 3 n) because it divides
+    the problem size by three in each iteration.
+    The array must be sorted.
+    @param arr: The array where the algorithm will search the target.
+    @param target: The element that the algorithm will search in the array.
+    @return: True if the target is in the array, False otherwise.
+"""
 
-# Ternary search implementation
-# Array must be sorted
+
 def ternary_search(arr, target):
     if len(arr) == 0:  # O(1)
         return False  # O(1)

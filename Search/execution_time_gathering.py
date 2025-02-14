@@ -28,7 +28,7 @@ def take_times(size, samples_by_size):
 
     return [
         take_time_for_algorithm(samples, algorithms.lineal_search),
-        take_time_for_algorithm(samples, algorithms.searh_in),
+        take_time_for_algorithm(samples, algorithms.search_in),
         take_time_for_algorithm(samples, algorithms.binary_search),
         take_time_for_algorithm(samples, algorithms.ternary_search)
     ]

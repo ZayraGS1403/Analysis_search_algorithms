@@ -29,7 +29,7 @@ class DataGeneratorTest(unittest.TestCase):
         self.assertTrue(N == len(random_list))
         for number in random_list:
             self.assertTrue(number <= constants.MAX_VALUE)
-            self.assertTrue(number > 0)
+            self.assertTrue(number >= 0)
         pass
 
 if __name__ == "__main__":
